@@ -349,17 +349,17 @@ export function EntityRelationshipDiagram() {
         <text x="865" y="118" className="dg-small">Warehouse location (K)</text>
         <text x="865" y="140" className="dg-small dg-small--muted">Capacity (K)</text>
 
-        <path d="M260 115 H310" className="dg-connector" />
-        <path d="M380 115 H435" className="dg-connector" />
-        <polygon points="345,85 390,115 345,145 300,115" className="dg-relationship" />
+        <path d="M260 115 H285" className="dg-connector" />
+        <path d="M405 115 H435" className="dg-connector" />
+        <polygon points="345,76 405,115 345,154 285,115" className="dg-relationship" />
         <text x="345" y="112" textAnchor="middle" className="dg-small dg-small--dark">produces</text>
-        <text x="345" y="129" textAnchor="middle" className="dg-small dg-small--dark">capacity</text>
+        <text x="345" y="128" textAnchor="middle" className="dg-small dg-small--dark">capacity</text>
 
-        <path d="M660 105 H710" className="dg-connector" />
-        <path d="M780 105 H835" className="dg-connector" />
-        <polygon points="745,75 790,105 745,135 700,105" className="dg-relationship" />
+        <path d="M660 105 H685" className="dg-connector" />
+        <path d="M805 105 H835" className="dg-connector" />
+        <polygon points="745,66 805,105 745,144 685,105" className="dg-relationship" />
         <text x="745" y="102" textAnchor="middle" className="dg-small dg-small--dark">stores</text>
-        <text x="745" y="119" textAnchor="middle" className="dg-small dg-small--dark">demand</text>
+        <text x="745" y="118" textAnchor="middle" className="dg-small dg-small--dark">demand</text>
 
         <rect x="330" y="300" width="440" height="92" rx="14" className="dg-box dg-box--accent" />
         <text x="550" y="330" textAnchor="middle" className="dg-label dg-label--cyan">SHIPMENT RELATIONSHIP</text>

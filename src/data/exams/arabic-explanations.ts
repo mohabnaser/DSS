@@ -1072,13 +1072,13 @@ export const ARABIC_EXPLANATIONS: Record<string, ArabicExamEntry> = {
     explanationAr:
       'سؤال أساسي في امتحانات 2023 و2025: ارسم مخطط بلوكات يوضح الربط بين **الكلمات المحجوزة في GAMS (Reserved Keywords)** ومكونات النموذج الرياضي القياسي، ثم اذكر معايير الكفاءة والفعالية.',
     solutionAr: `**الربط بين مكونات النموذج الرياضي وكلمات GAMS المحجوزة:**
-1. **Indices / Problem Entities (الفهارس والمجموعات)** ⟷ **`SETS`**
-2. **Given Data / Known Coefficients (البيانات والمعاملات المعلومة)** ⟷ **`PARAMETERS` / `TABLES` / `SCALARS`**
-3. **Decision Variables & Objective Variable (متغيرات القرار والهدف)** ⟷ **`VARIABLES`** (\`POSITIVE VARIABLES\`, \`FREE VARIABLE\`)
-4. **Constraints & Objective Function (القيود ودالة الهدف)** ⟷ **`EQUATIONS`** (Declaration then \`..\` algebraic definition)
-5. **Symbolic Model Grouping (تجميع معادلات النموذج)** ⟷ **`MODEL`** (\`/all/\`)
-6. **Solver Invocation & Optimization Direction (استدعاء الحل)** ⟷ **`SOLVE ... USING LP/MIP/NLP MINIMIZING/MAXIMIZING ...`**
-7. **Output & Reporting (عرض النتائج)** ⟷ **`DISPLAY`**
+1. **Indices / Problem Entities (الفهارس والمجموعات)** ⟷ **SETS**
+2. **Given Data / Known Coefficients (البيانات والمعاملات المعلومة)** ⟷ **PARAMETERS / TABLES / SCALARS**
+3. **Decision Variables & Objective Variable (متغيرات القرار والهدف)** ⟷ **VARIABLES** (POSITIVE VARIABLES, FREE VARIABLE)
+4. **Constraints & Objective Function (القيود ودالة الهدف)** ⟷ **EQUATIONS** (Declaration then \`..\` algebraic definition)
+5. **Symbolic Model Grouping (تجميع معادلات النموذج)** ⟷ **MODEL** (\`/all/\`)
+6. **Solver Invocation & Optimization Direction (استدعاء الحل)** ⟷ **SOLVE ... USING LP/MIP/NLP MINIMIZING/MAXIMIZING ...**
+7. **Output & Reporting (عرض النتائج)** ⟷ **DISPLAY**
 - **معايير الكفاءة (Efficiency):** تغطية النماذج، الصياغة المختصرة، فصل البيانات، تنوع الـ Solvers.
 - **معايير الفعالية (Effectiveness):** التواصل مع متخذ القرار، دعم تجارب What-if، التفسير، والعرض البصري.`,
   },
@@ -1111,8 +1111,8 @@ export const ARABIC_EXPLANATIONS: Record<string, ArabicExamEntry> = {
     explanationAr:
       'سؤال كود GAMS عملي ومهم جداً: المطلوب إعادة كتابة كود النقل المفكك (اللي مكتوب معادلة بمعادلة بأرقام ثابتة) ليتحول إلى كود GAMS قياسي يحقق **فصل البيانات عن النموذج (Model–Data separation)** و**الصياغة المختصرة (Compact formulation)** باستخدام `SETS` و`SUM`.',
     solutionAr: `**الخطوات اللي لازم تعملها في الكود عشان تاخد الدرجة الكاملة:**
-1. عرّف المجموعات **`SETS`**: المصانع \`i /p1, p2/\` والأسواق \`j /m1, m2, m3/\`.
-2. افصل كل الأرقام في **`PARAMETERS`** و **`TABLE`**: طاقة المصانع \`a(i)\`، طلب الأسواق \`b(j)\`، وجدول تكلفة الشحن \`c(i,j)\`.
+1. عرّف المجموعات **SETS**: المصانع \`i /p1, p2/\` والأسواق \`j /m1, m2, m3/\`.
+2. افصل كل الأرقام في **PARAMETERS** و **TABLE**: طاقة المصانع \`a(i)\`، طلب الأسواق \`b(j)\`، وجدول تكلفة الشحن \`c(i,j)\`.
 3. عرّف المتغيرات بشكل مفهرس: \`POSITIVE VARIABLE x(i,j); VARIABLE z;\`.
 4. اكتب 3 معادلات جبرية مختصرة فقط باستخدام \`SUM\` بدلاً من كتابة كل معادلة منفصلة:
    - \`obj.. z =e= sum((i,j), c(i,j) * x(i,j));\`
