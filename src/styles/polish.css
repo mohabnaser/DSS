@@ -1,0 +1,423 @@
+/* ==========================================================================
+   Polish layer — reference-study-guide look (loaded last)
+   Larger readable type, tighter rhythm, right-rail TOC, RTL accent bars.
+   ========================================================================== */
+
+/* ---------------------------------------------------------- section layout */
+.page-container--section {
+  max-width: 1500px;
+  padding-top: 34px;
+}
+
+.section-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 264px;
+  gap: 34px;
+  align-items: start;
+}
+
+.section-layout__main {
+  min-width: 0;
+}
+
+/* ------------------------------------------------------------- page TOC */
+.page-toc {
+  position: sticky;
+  top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: calc(100vh - var(--topbar-height) - 36px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.page-toc__card {
+  background: linear-gradient(160deg, rgba(16, 26, 42, 0.92), rgba(10, 17, 29, 0.92));
+  border: 1px solid rgba(6, 182, 212, 0.18);
+  border-radius: 14px;
+  padding: 14px 14px 12px;
+}
+
+.page-toc__title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #67e8f9;
+  margin-bottom: 10px;
+}
+
+.page-toc__title-ar {
+  font-family: var(--font-arabic);
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 12.5px;
+  color: #94a3b8;
+}
+
+.page-toc__list {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.page-toc__link {
+  text-align: left;
+  background: none;
+  border: 0;
+  border-left: 2px solid transparent;
+  margin-left: -1px;
+  padding: 6px 10px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.4;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.page-toc__link:hover {
+  color: #e2e8f0;
+}
+
+.page-toc__link.is-active {
+  color: #22d3ee;
+  border-left-color: #22d3ee;
+  background: linear-gradient(90deg, rgba(6, 182, 212, 0.1), transparent);
+  font-weight: 600;
+}
+
+.page-toc__link--exam {
+  color: #fbbf24;
+}
+
+.page-toc__glance {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.page-toc__glance > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.page-toc__glance dt {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.page-toc__glance dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.page-toc__glance dd.is-amber { color: #fbbf24; }
+.page-toc__glance dd.is-cyan { color: #22d3ee; }
+.page-toc__glance dd.is-green { color: #34d399; }
+
+.page-toc__cta {
+  width: 100%;
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(6, 182, 212, 0.45);
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(20, 184, 166, 0.16));
+  color: #a5f3fc;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.page-toc__cta:hover {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.3), rgba(20, 184, 166, 0.24));
+}
+
+.page-toc__card--links button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: 6px 2px;
+  font-size: 13px;
+  color: #cbd5e1;
+  cursor: pointer;
+  text-align: left;
+}
+
+.page-toc__card--links button:hover {
+  color: #22d3ee;
+}
+
+@media (max-width: 1280px) {
+  .section-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .page-toc {
+    display: none;
+  }
+
+  .page-container--section {
+    max-width: 1160px;
+  }
+}
+
+/* --------------------------------------------------- headings & rhythm */
+.subheading {
+  margin: 0 0 18px;
+}
+
+.subheading > span {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #22d3ee;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+.subheading h2 {
+  font-size: clamp(26px, 2.6vw, 32px);
+  color: #fff;
+}
+
+.subheading--minor {
+  margin: 26px 0 14px;
+}
+
+.subheading--minor h3 {
+  font-size: 22px;
+  color: #f8fafc;
+}
+
+.content-section {
+  padding-bottom: 34px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.content-section:last-of-type {
+  border-bottom: 0;
+}
+
+/* ------------------------------------------- Arabic: reference accent bar */
+.ar-callout,
+.ar-card-box {
+  border: 1px solid rgba(20, 184, 166, 0.16);
+  border-inline-start: 3px solid #14b8a6;
+  background: linear-gradient(270deg, rgba(20, 184, 166, 0.1), rgba(6, 182, 212, 0.03));
+  border-radius: 8px;
+}
+
+.page-header__ar {
+  font-family: var(--font-arabic);
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* ------------------------------------- concept cards: top colour accent */
+.concept-card {
+  border-top-width: 2px;
+}
+
+.concept-card--cyan { border-top-color: #06b6d4; }
+.concept-card--amber { border-top-color: #f59e0b; }
+.concept-card--teal { border-top-color: #14b8a6; }
+.concept-card--purple { border-top-color: #8b5cf6; }
+.concept-card--default { border-top-color: #64748b; }
+
+/* ------------------------------------------------- exam focus / picture it */
+.exam-focus-box__head .exam-focus-box__icon,
+.picture-it-box__head .picture-it-box__icon {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  flex: 0 0 30px;
+}
+
+.exam-focus-box__icon {
+  background: rgba(245, 158, 11, 0.14);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #fbbf24;
+}
+
+.picture-it-box__icon {
+  background: rgba(139, 92, 246, 0.14);
+  border: 1px solid rgba(139, 92, 246, 0.35);
+  color: #c4b5fd;
+}
+
+.exam-focus-box__ar,
+.picture-it-box__ar {
+  border-top: 0;
+  padding: 11px 16px;
+  border-radius: 8px;
+  border-inline-start: 3px solid currentColor;
+}
+
+.exam-focus-box__ar {
+  background: rgba(245, 158, 11, 0.08);
+  border-inline-start-color: #f59e0b;
+}
+
+.picture-it-box__ar {
+  background: rgba(139, 92, 246, 0.08);
+  border-inline-start-color: #8b5cf6;
+}
+
+/* ------------------------------------------------ legacy small type fixes */
+.objective-list li {
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+.section-intro {
+  margin-bottom: 30px;
+}
+
+.section-intro__side strong {
+  font-size: 14px;
+}
+
+.section-intro__side > div > span:last-child {
+  font-size: 13px;
+}
+
+.callout {
+  margin: 18px 0;
+}
+
+.callout__title {
+  font-size: 14.5px;
+}
+
+.callout__body {
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+.key-idea {
+  margin: 22px 0;
+}
+
+.key-idea__label {
+  font-size: 11px;
+}
+
+.divider-label {
+  font-size: 11px;
+  margin: 26px 0;
+}
+
+.table-figure {
+  margin: 18px 0;
+}
+
+.table-figure figcaption {
+  font-size: 11.5px;
+  color: #22d3ee;
+}
+
+.table-figure table {
+  font-size: 14.5px;
+}
+
+.table-figure thead th {
+  font-size: 11.5px;
+  color: #94a3b8;
+}
+
+.table-figure tbody th {
+  font-size: 14.5px;
+}
+
+.table-figure tbody td {
+  color: #cbd5e1;
+}
+
+.table-figure--compact table {
+  font-size: 14px;
+}
+
+.table-figure code {
+  font-size: 13px;
+}
+
+.takeaway-grid p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------------- diagrams */
+.diagram-frame {
+  margin: 20px 0;
+}
+
+.diagram-frame__head h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.diagram-frame__canvas {
+  padding: 18px;
+}
+
+.diagram-frame figcaption {
+  font-size: 13.5px;
+  color: #94a3b8;
+  max-width: none;
+}
+
+/* VUCA cards: larger text */
+.vuca-card strong {
+  font-size: 17px !important;
+}
+
+.vuca-card div > span {
+  font-size: 13.5px !important;
+}
+
+.vuca-card p {
+  font-size: 14px !important;
+}
+
+/* ------------------------------------------------ exam practice block */
+.section-exam-block {
+  margin: 30px 0 20px;
+  scroll-margin-top: 24px;
+}
+
+.section-exam-block__desc {
+  font-size: 15px;
+  color: #94a3b8;
+}
+
+.question-item-card__wording p {
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: #f8fafc;
+}
