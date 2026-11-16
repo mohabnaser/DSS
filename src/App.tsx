@@ -90,7 +90,7 @@ export default function App() {
       <div className="app-main">
         <Topbar page={page} onOpenMenu={() => setSidebarOpen(true)} onNavigate={navigate} />
         <main id="main-scroll" className="main-scroll">
-          <div id="main-content" className={`page-container ${SectionComponent ? 'page-container--section' : ''}`}>
+          <div id="main-content" className={`page-container ${section ? 'page-container--section' : ''}`}>
             {page === 'dashboard' && <Dashboard onNavigate={navigate} />}
             {page === 'exam' && <ExamStudio />}
             {page === 'revision' && <Revision onNavigate={navigate} />}
