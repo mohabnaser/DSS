@@ -870,6 +870,321 @@ export const ARABIC_EXPLANATIONS: Record<string, ArabicExamEntry> = {
     explanationAr:
       'الإجابة **TRUE (صح)** ✅. شفت الفرق؟ هنا قال **graphically represent a modeling domain** فقط (تمثيل مجال النمذجة بيانياً عبر Entities, Attributes, Relationships)، ودي فعلاً الوظيفة الصحيحة للـ Structured Modeling!',
   },
+
+  // =========================================================================
+  // SECTION 08: MODELING LANGUAGES & GAMS (38 Questions)
+  // =========================================================================
+  'mt2015-b1': {
+    explanationAr:
+      'سؤال مقالي أساسي: اذكر قدرات ومميزات لغة النمذجة **GAMS**.',
+    solutionAr: `**أهم قدرات GAMS (Modeling Capabilities):**
+1. **Declarative Algebraic Representation:** صياغة جبرية مختصرة قريبة جداً من الصيغة الرياضية باستخدام المجموعات (SETS) والفهارس (Indices).
+2. **Model–Data Independence:** فصل كامل بين هيكل المعادلات وبين الأرقام والبيانات، مما يسهل تغيير البيانات دون المساس بالمعادلات.
+3. **Model–Solver Independence:** فصل النموذج عن خوارزمية الحل، مع إمكانية التبديل بين عشرات الـ Solvers (LP, MIP, NLP) بسطر واحد.
+4. **Automatic Differentiation & Error Checking:** فحص أخطاء الصياغة وحساب المشتقات تلقائياً للنماذج غير الخطية.
+5. **Model Library & Report Generation:** مكتبة نماذج جاهزة وتوليد تقارير بالحل الأمثل والحساسية (Marginal values).`,
+  },
+  'mt2015-b2': {
+    explanationAr:
+      'اشرح الفرق الأساسي بين لغة بناء النماذج (**GAMS**) ولغات البرمجة العامة الإجرائية (**C++ / Java / Fortran**).',
+    solutionAr: `**المقارنة الجوهرية بين GAMS ولغات البرمجة العامة:**
+- **1. GAMS (Declarative Modeling Language):**
+  - المبرمج يكتب **ماذا يريد أن يحل (What the model is)**: المجموعات، المعاملات، المتغيرات، والمعادلات الجبرية فقط.
+  - لا يكتب خوارزمية الحل؛ بل يستدعي **Solver** خارجي جاهز يقوم بالحل رياضياً.
+- **2. General-Purpose Programming Language (Procedural - e.g., C++):**
+  - المبرمج يكتب **كيف يتم الحل خطوة بخطوة (How to solve it)**: هياكل البيانات، المصفوفات، الحلقات التكرارية، وخوارزمية الحل بالكامل من الصفر.
+  - تستغرق وقتاً أطول وتكون صعبة التعديل والصيانة عند تغير حجم المشكلة.`,
+  },
+  'mt2016-b1': {
+    explanationAr:
+      'اذكر 3 عناصر دعم يوفرها نظام **VDSS (Visual Decision Support System / DSS Generator)** لتعزيز عملية بناء النماذج.',
+    solutionAr: `**عناصر الدعم الثلاثة في VDSS:**
+1. **Interactive Graphical Model Construction:** بناء النموذج وتجهيز مدخلاته عبر واجهة رسومية تفاعلية بدلاً من الكود النصي المعقد.
+2. **Experimentation & What-if / Scenario Management:** تسهيل تشغيل سيناريوهات What-if وGoal-seeking وتجارب الحساسية بمرونة.
+3. **Visual Result Presentation & Explanation:** عرض مخرجات الحل في رسوم بيانية وجداول واضحة تساعد متخذ القرار على فهم وتفسير النتائج.`,
+  },
+  'mt2016-b2': {
+    explanationAr:
+      'اذكر عناصر ومعايير **الفعالية (Effectiveness features)** الخاصة بنظام VDSS كمولد لنظم دعم القرار (DSS Generator).',
+    solutionAr: `**عناصر الـ Effectiveness (التواصل والتجريب مع متخذ القرار):**
+1. **User-Friendly Communication Interface:** واجهة سهلة تواصل فكرة النموذج لمتخذ القرار غير المتخصص.
+2. **Support for Model Experimentation:** دعم تجارب What-if، وتحليل السيناريوهات، والـ Goal-seeking.
+3. **Explanation & Interpretation Capability:** توضيح معنى المتغيرات والقيود وتفسير سبب الوصول للحل.
+4. **Graphical & Tabular Visualization:** عرض النتائج في لوحات رسومية وتقارير مقروءة.`,
+  },
+  'mt2018-a4': {
+    explanationAr:
+      'عرّف ميزتين رئيسيتين للغة النمذجة التصريحية (**Declarative Modeling Language**)، مع إعطاء مثال من GAMS يوضح ذلك.',
+    solutionAr: `**الميزتان الأساسيتان للغة التصريحية (Declarative Language) مع مثال GAMS:**
+1. **Separation of Model Specification from Solution Algorithm (فصل توصيف النموذج عن خوارزمية الحل):**
+   - في GAMS نكتب المعادلة الجبرية مثل \`cap(i).. sum(j, x(i,j)) =l= a(i);\` ثم نطلب \`SOLVE transport USING LP MINIMIZING z;\` دون برمجة خوارزمية Simplex.
+2. **Model–Data Independence & Compact Set-Based Notation (فصل النموذج عن البيانات والصياغة المختصرة بالمجموعات):**
+   - المعادلات تُكتب بدلالة الفهارس \`SETS i, j\`، فإذا زاد عدد المصانع من 3 إلى 100 نغير فقط عناصر الـ \`SET\` والـ \`TABLE\` وتظل المعادلات كما هي.`,
+  },
+  'mt2018-b7': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. قدرة التفسير/الشرح (**Interpretation / Explanation capability**) في لغة النمذجة هي التي تصف المتغيرات وهيكل النموذج وتوصيفه الرياضي بلغة مفهومة.',
+  },
+  'mt2018-b8': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. أشهر فخ في أسئلة GAMS! اللغات التصريحية (**Declarative modeling languages**) بتركز على **التوصيف الرياضي للنموذج (Mathematical specification / WHAT)**، ومش بتركز على خوارزمية أو استراتيجية الحل (**Solution strategy / HOW**) لأن الحل ده شغلانة الـ Solver!',
+  },
+  'mt2018-b9': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. مولد نظم دعم القرار (**DSS Generator**) يدعم تجريب النماذج (Model experimentation مثل What-if) وتحليل وعرض نتائجها.',
+  },
+  'mt2018-b10': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. خدعة متكررة جداً! الـ **GAMS-IDE** هو مجرد **واجهة تحرير وتشغيل نصية/رسومية (Text editor & execution environment)**، ومش هو المسؤول عن ربط أو اختيار خوارزمية الـ Solver! اللي بيحدد نوع المشكلة والـ Solver هو جملة **`SOLVE ... USING ...`** ونظام GAMS التنفيذي.',
+  },
+  'f2016-a1': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. في تصنيف المحاضرة لأدوات النمذجة، برنامج **Excel** يُعتبر بيئة/أداة نمذجة متخصصة قائمة على أسلوب الجداول الإلكترونية (**Spreadsheet approach**).',
+  },
+  'f2016-a2': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. قدرة الشرح والتفسير (**Explanation capability**) في لغة النمذجة تصف هيكل النموذج وتوصيفه الرياضي ومتغيراته.',
+  },
+  'f2016-a3': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. خدعة ذكية جداً بين **Efficiency** و **Effectiveness**! وجود مجموعة شاملة من الـ Solvers في GAMS يعزز **كفاءتها (Efficiency criteria)** مش الـ Effectiveness! لأن الـ Effectiveness تخص التواصل مع متخذ القرار والتجريب والعرض البصري.',
+  },
+  'f2016-a4': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. خدعة دقيقة في كلمات GAMS المحجوزة! اللي بيضمن التمثيل المختصر (**Compact representation**) للمعادلات هو استخدام المجموعات والفهارس (**`SETS` and indices / `SUM`**) مش كلمتي `VARIABLES` و`EQUATIONS` لوحدهم!',
+  },
+  'f2016-a5': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. اللغات التصريحية (Declarative) تركز فقط على التوصيف الرياضي للنموذج، ولا تتدخل في برمجة خوارزمية الحل.',
+  },
+  'f2017-a3': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. قدرة التفسير والشرح (**Explanation capability**) توضح هيكل النموذج وتوصيفه الرياضي.',
+  },
+  'f2017-a5': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. اللغات التصريحية (**Declarative languages**) تركز على التوصيف الرياضي (Mathematical specification) فقط، ولا تركز على استراتيجية أو خوارزمية الحل (**Solution strategy**).',
+  },
+  'f2017-b1': {
+    explanationAr:
+      'هل تعتبر VDSS لغة نمذجة أم مولد نظم دعم قرار (DSS Generator)؟ وضح إجابتك بأمثلة.',
+    solutionAr: `**الإجابة النموذجية:**
+- يُصنف **VDSS** أساساً كـ **DSS Generator (مولد نظم دعم قرار)** وليس مجرد لغة نمذجة جبرية بحتة.
+- **التبرير والأمثلة:** لأنه بجانب بناء النموذج، يوفر واجهة مستخدم تفاعلية (GUI)، وأدوات تجريب وتحليل سيناريوهات (What-if & Goal-seeking)، ومولد تقارير ورسوم بيانية للتواصل المباشر مع متخذ القرار (وهي معايير الـ Effectiveness الخاصة بالـ DSS Generator).`,
+  },
+  'f2017-b2': {
+    explanationAr:
+      'لماذا لا يُعتبر VDSS لغة تصريحية خالصة (Declarative language)؟ واذكر 3 أسباب تبرر أهمية فصل البيانات عن النموذج (Data–Model Independence).',
+    solutionAr: `**جزئي الإجابة:**
+- **أولاً: لماذا VDSS ليس لغة تصريحية جبرية خالصة:** لأنه يعتمد على التفاعل الإجرائي/الرسومي والجداول (Spreadsheet/GUI-driven) حيث ترتبط خطوات الحساب والعرض ببيئة التشغيل، على عكس اللغات الجبرية التصريحية مثل GAMS.
+- **ثانياً: 3 أسباب لأهمية فصل البيانات عن النموذج (Data–Model Independence):**
+  1. **Reusability across instances:** إمكانية تشغيل نفس هيكل المعادلات على بيانات فترات أو فروع مختلفة دون تعديل الكود.
+  2. **Scalability:** تكبير حجم المشكلة (إضافة مصانع أو أسواق جديدة في الـ SETS) دون إعادة كتابة المعادلات.
+  3. **Maintainability & Error Reduction:** سهولة تحديث الأرقام من قواعد بيانات خارجية وتقليل أخطاء تعديل المعادلات.`,
+  },
+  'f2017-b3': {
+    explanationAr:
+      'كيف يتعامل VDSS مع أسلوب الجداول الإلكترونية (Spreadsheet approach)؟ وهل يمتلك قدرات توليد تقارير (Report generator)؟',
+    solutionAr: `**الإجابة النموذجية:**
+- **1. التعامل مع الـ Spreadsheet Approach:** يتيح إدخال وعرض المعاملات والمتغيرات في جداول شبيهة بـ Excel مع ربط الخلايا بصيغ النموذج لتسهيل تجارب What-if.
+- **2. قدرات توليد التقارير (Report Generator):** نعم، يمتلك مولد تقارير ورسوم بيانية مدمج (Built-in report & chart generator) لعرض نتائج الحل الأمثل والمقارنات بين السيناريوهات لمتخذ القرار.`,
+  },
+  'f2018-a3': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. قدرة الشرح والتفسير (**Explanation capability**) في لغة النمذجة تصف المتغيرات وهيكل النموذج وعلاقاته الرياضية.',
+  },
+  'f2018-a5': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. اللغات التصريحية (**Declarative modeling languages**) لا تركز على استراتيجية الحل (Solution strategy)، بل تركز على التوصيف الرياضي للنموذج فقط.',
+  },
+  'f2018-a14': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. خدعة الكفاءة مقابل الفعالية! التواصل الجيد مع متخذ القرار (**appropriate communications with decision makers**) يتبع معايير **الفعالية (Effectiveness criteria)** وليس الكفاءة (Efficiency criteria)!',
+  },
+  'f2018-e1': {
+    explanationAr:
+      'سؤال مقالي مهم جداً ويتكرر في الامتحانات الحديثة: اذكر العناصر الخاصة بمعايير **الكفاءة (Efficiency)** ومعايير **الفعالية (Effectiveness)** للغة النمذجة.',
+    solutionAr: `**المقارنة الكاملة بين Efficiency و Effectiveness للغة النمذجة:**
+- **أولاً: Efficiency Criteria (معايير الكفاءة التقنية والرياضية - تهم محلل النماذج):**
+  1. **Scope of Model Coverage:** تغطية أنواع واسعة من النماذج (LP, MIP, NLP, Network).
+  2. **Compact Mathematical Formulation:** صياغة مختصرة باستخدام المجموعات والفهارس (SETS) وفصل النموذج عن البيانات.
+  3. **Modeler Productivity:** سرعة كتابة وفحص وتصحيح النموذج.
+  4. **Comprehensive Set of Solvers:** توفر محركات حل قوية ومتنوعة.
+  5. **Support for Model-Building Phases:** دعم مراحل الإنشاء، التحقق، والتوثيق.
+- **ثانياً: Effectiveness Criteria (معايير الفعالية الإدارية - تهم متخذ القرار):**
+  1. **Effective Communication with Decision Makers:** سهولة فهم النموذج ونتائجه لغير المتخصصين.
+  2. **Support for Model Experimentation:** دعم تجارب What-if، السيناريوهات، وتحليل الحساسية.
+  3. **Explanation & Interpretation Capability:** تفسير معنى المتغيرات والنتائج.
+  4. **Visualization & Report Generation:** عرض المخرجات في جداول ورسوم بيانية واضحة.`,
+  },
+  'f2019-a9': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. التواصل الفعال مع متخذ القرار (**effective communications with decision makers**) يُقاس بمعايير **الفعالية (Effectiveness)** وليس الكفاءة (Efficiency).',
+  },
+  'f2019-a11': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. قدرة التفسير (**Interpretation capability**) تصف المتغيرات وهيكل النموذج وتوصيفه الرياضي.',
+  },
+  'f2019-a12': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. الـ **DSS Generator** يدعم تجريب النماذج (Experimentation) وتحليل النتائج.',
+  },
+  'f2019-a14': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. الـ **IDE** لا يختار خوارزمية الحل؛ اختيار نوع المشكلة والـ Solver يتم عبر جملة `SOLVE ... USING ...` وإعدادات نظام GAMS.',
+  },
+  'f2020-a13': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. تقييم التواصل مع متخذ القرار يتبع معايير **الفعالية (Effectiveness)** وليس الكفاءة (Efficiency).',
+  },
+  'f2020-a15': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. قدرة التفسير (**Interpretation capability**) تصف هيكل النموذج وتوصيفه الرياضي.',
+  },
+  'f2020-a16': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. خدعة ذكية! تجريب النماذج والتواصل مع متخذ القرار (**model experimentation and communication**) هي معايير **Effectiveness (فعالية)** وليست Efficiency!',
+  },
+  'f2020-a18': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. الـ **GAMS-IDE** هو بيئة تحرير وتشغيل، وليس الأداة المسؤولة عن اختيار خوارزمية الحل الرياضية.',
+  },
+  'f2020-c1': {
+    explanationAr:
+      'اختر معيارين لتصنيف لغات بناء النماذج، وحدد أنواع النماذج المناسبة، مع مقارنة أسلوبين لبناء النماذج.',
+    solutionAr: `**الإجابة النموذجية المنظمة:**
+- **1. معياران لتصنيف لغات النمذجة:**
+  - **حسب أسلوب التمثيل (By Representation Style):** لغات جبرية تصريحية (Algebraic/Declarative مثل GAMS)، لغات جداول إلكترونية (Spreadsheet-based مثل Excel)، ولغات رسومية/هيكلية (Graphical/Block-oriented مثل Arena).
+  - **حسب مستوى الكفاءة مقابل الفعالية (Efficiency vs Effectiveness):** لغات موجهة للمحلل الرياضي (GAMS) مقابل مولدات نظم دعم القرار (DSS Generators).
+- **2. مقارنة بين أسلوبين (GAMS vs Spreadsheet/Excel):**
+  - **GAMS (Algebraic):** تفصل البيانات عن المعادلات، تدعم النماذج الضخمة متعددة الأبعاد عبر SETS، وترتبط بمكتبة Solvers احترافية.
+  - **Spreadsheet (Excel):** تدمج البيانات والصيغ في خلايا مرئية، ممتازة للنماذج الصغيرة وتجارب What-if السريعة، لكنها صعبة التوسع في النماذج الكبيرة.`,
+  },
+  'f2023-q1-13': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. قدرة الشرح والتفسير (**Explanation capability**) في لغة النمذجة تصف المتغيرات والهيكل والعلاقات بين مكونات النموذج.',
+  },
+  'f2023-q1-14': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. اللغات التصريحية (**Declarative modeling languages**) تركز على التوصيف الرياضي للنموذج فقط، ولا تركز على استراتيجية الحل (**solution strategy**).',
+  },
+  'f2023-q4': {
+    explanationAr:
+      'سؤال أساسي في امتحانات 2023 و2025: ارسم مخطط بلوكات يوضح الربط بين **الكلمات المحجوزة في GAMS (Reserved Keywords)** ومكونات النموذج الرياضي القياسي، ثم اذكر معايير الكفاءة والفعالية.',
+    solutionAr: `**الربط بين مكونات النموذج الرياضي وكلمات GAMS المحجوزة:**
+1. **Indices / Problem Entities (الفهارس والمجموعات)** ⟷ **`SETS`**
+2. **Given Data / Known Coefficients (البيانات والمعاملات المعلومة)** ⟷ **`PARAMETERS` / `TABLES` / `SCALARS`**
+3. **Decision Variables & Objective Variable (متغيرات القرار والهدف)** ⟷ **`VARIABLES`** (\`POSITIVE VARIABLES\`, \`FREE VARIABLE\`)
+4. **Constraints & Objective Function (القيود ودالة الهدف)** ⟷ **`EQUATIONS`** (Declaration then \`..\` algebraic definition)
+5. **Symbolic Model Grouping (تجميع معادلات النموذج)** ⟷ **`MODEL`** (\`/all/\`)
+6. **Solver Invocation & Optimization Direction (استدعاء الحل)** ⟷ **`SOLVE ... USING LP/MIP/NLP MINIMIZING/MAXIMIZING ...`**
+7. **Output & Reporting (عرض النتائج)** ⟷ **`DISPLAY`**
+- **معايير الكفاءة (Efficiency):** تغطية النماذج، الصياغة المختصرة، فصل البيانات، تنوع الـ Solvers.
+- **معايير الفعالية (Effectiveness):** التواصل مع متخذ القرار، دعم تجارب What-if، التفسير، والعرض البصري.`,
+  },
+  'f2025-q1-11': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. قدرة التفسير والشرح (**Explanation capability**) تصف المتغيرات وهيكل النموذج وتوصيفه الرياضي.',
+  },
+  'f2025-q1-12': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. اللغات التصريحية (**Declarative languages**) تركز على التوصيف الرياضي للمشكلة وليس على استراتيجية الحل.',
+  },
+  'f2025-q4': {
+    explanationAr:
+      'سؤال مخطط GAMS المتكرر في 2025: ارسم مخطط الربط بين كلمات GAMS المحجوزة ومكونات النموذج الرياضي القياسي، مع ذكر عناصر الـ Efficiency والـ Effectiveness.',
+    solutionAr: `**مخطط الربط القياسي (7 بلوكات متتالية):**
+- **Mathematical Indices** → \`SETS\`
+- **Input Data / Coefficients** → \`PARAMETERS\`, \`TABLES\`, \`SCALARS\`
+- **Decision Variables** → \`VARIABLES\` (\`POSITIVE VARIABLES\`)
+- **Objective & Constraints** → \`EQUATIONS\`
+- **Model Definition** → \`MODEL\`
+- **Solution Execution** → \`SOLVE ... USING ...\`
+- **Result Output** → \`DISPLAY\`
+- ثم اذكر قائمة **Efficiency** (model coverage, compact formulation, solver set) وقائمة **Effectiveness** (decision-maker communication, what-if experimentation, explanation, visualization).`,
+  },
+
+  // =========================================================================
+  // SECTION 09: PRODUCTION & SHIPPING LP CASE STUDY (5 Questions)
+  // =========================================================================
+  'f2016-b1': {
+    explanationAr:
+      'سؤال كود GAMS عملي ومهم جداً: المطلوب إعادة كتابة كود النقل المفكك (اللي مكتوب معادلة بمعادلة بأرقام ثابتة) ليتحول إلى كود GAMS قياسي يحقق **فصل البيانات عن النموذج (Model–Data separation)** و**الصياغة المختصرة (Compact formulation)** باستخدام `SETS` و`SUM`.',
+    solutionAr: `**الخطوات اللي لازم تعملها في الكود عشان تاخد الدرجة الكاملة:**
+1. عرّف المجموعات **`SETS`**: المصانع \`i /p1, p2/\` والأسواق \`j /m1, m2, m3/\`.
+2. افصل كل الأرقام في **`PARAMETERS`** و **`TABLE`**: طاقة المصانع \`a(i)\`، طلب الأسواق \`b(j)\`، وجدول تكلفة الشحن \`c(i,j)\`.
+3. عرّف المتغيرات بشكل مفهرس: \`POSITIVE VARIABLE x(i,j); VARIABLE z;\`.
+4. اكتب 3 معادلات جبرية مختصرة فقط باستخدام \`SUM\` بدلاً من كتابة كل معادلة منفصلة:
+   - \`obj.. z =e= sum((i,j), c(i,j) * x(i,j));\`
+   - \`supply(i).. sum(j, x(i,j)) =l= a(i);\`
+   - \`demand(j).. sum(i, x(i,j)) =g= b(j);\`
+5. اختم بـ \`MODEL transport /all/;\` ثم \`SOLVE transport USING LP MINIMIZING z;\`.`,
+  },
+  'f2018-c1': {
+    explanationAr:
+      'سؤال صياغة رياضية (Mathematical Formulation): صغ مشكلة شحن الغسالات من المصانع إلى الأسواق كنموذج برمجة خطية (LP) لتقليل إجمالي تكلفة الشحن.',
+    solutionAr: `**الصياغة الرياضية الكاملة (LP Formulation):**
+- **الفهارس (Indices):** $i \\in I$ (المصانع/Plants)، $j \\in J$ (الأسواق/Markets).
+- **المعاملات المعلومة (Parameters):** $S_i$ طاقة العرض بالمصنع $i$، $D_j$ الطلب بالسوق $j$، $C_{ij}$ تكلفة شحن الوحدة من $i$ إلى $j$.
+- **متغيرات القرار (Decision Variables):** $X_{ij} \\ge 0$ الكمية المشحونة من المصنع $i$ إلى السوق $j$.
+- **دالة الهدف (Objective Function):** $\\min Z = \\sum_{i} \\sum_{j} C_{ij} X_{ij}$
+- **القيود (Constraints):**
+  1. **Supply / Capacity Constraint:** $\\sum_{j} X_{ij} \\le S_i \\quad \\forall i \\in I$
+  2. **Demand Constraint:** $\\sum_{i} X_{ij} \\ge D_j \\quad \\forall j \\in J$
+  3. **Non-negativity:** $X_{ij} \\ge 0 \\quad \\forall i, j$`,
+  },
+  'f2018-c2': {
+    explanationAr:
+      'اكتب كود GAMS الكامل لنموذج شحن الغسالات بأسلوب يحقق فصل البيانات عن النموذج والصياغة المختصرة والموديولارية.',
+    solutionAr: `**هيكل كود GAMS المطلوب:**
+- **Block 1 (\`SETS\`):** تعريف مجموعة المصانع \`i\` ومجموعة الأسواق \`j\`.
+- **Block 2 (Data - \`PARAMETERS\` & \`TABLE\`):** إدخال طاقات المصانع، طلبات الأسواق، وجدول مسافات/تكاليف الشحن.
+- **Block 3 (\`VARIABLES\`):** تعريف \`x(i,j)\` كمتغير موجب و\`z\` لإجمالي التكلفة.
+- **Block 4 (\`EQUATIONS\`):** تعريف وصياغة \`cost\`, \`supply(i)\`, \`demand(j)\` باستخدام \`sum\`.
+- **Block 5 (\`MODEL\` & \`SOLVE\`):** \`MODEL shipping /all/; SOLVE shipping USING LP MINIMIZING z; DISPLAY x.l, z.l;\`.`,
+  },
+  'f2018-c3': {
+    explanationAr:
+      'حدد نوع التجربة (Type of modeling experiment) المقابلة لتغيير قيمة كل من: (a) طاقة الإنتاج (Supplies)، (b) طلب السوق (Market demand)، (c) تكلفة الشحن (Shipping cost).',
+    solutionAr: `**تصنيف التجارب الثلاثة على النموذج:**
+- **a) تغيير طاقة الإنتاج $S_i$ (Supplies / Capacity):** **Policy / Internal Capability Experiment** (وتُحلل رياضياً كـ Right-Hand Side [RHS] sensitivity analysis لقيود الطاقة).
+- **b) تغيير طلب السوق $D_j$ (Market Demand):** **External Environment / Scenario Experiment** (وتُحلل رياضياً كـ RHS sensitivity analysis لقيود الطلب لأن الطلب متغير خارجي تحكمه السوق).
+- **c) تغيير تكلفة الشحن $C_{ij}$ (Shipping Cost):** **Objective Coefficient / Cost Parameter Sensitivity Experiment** (تغيير معاملات دالة الهدف الناتج عن تغير أسعار الوقود أو التعريفة).`,
+  },
+  'f2020-c2': {
+    explanationAr:
+      'باستخدام نموذج البرمجة الخطية للنقل والإنتاج، حدد كيف ننفذ الأنواع الأربعة التالية من تجارب النمذجة: (a) Policy experiment، (b) Impact of external changes، (c) Impact of technological changes، (d) Sensitivity analysis.',
+    solutionAr: `**ربط كل تجربة بالمعامل المقابل لها في نموذج الإنتاج والشحن:**
+- **a) Policy Experiment (تجربة سياسات داخلية):** تغيير المعاملات الخاضعة لسيطرة الإدارة مثل **طاقة الإنتاج المتاحة $C_{ij}$ أو الميزانية أو فتح/إغلاق خط إنتاج**.
+- **b) Impact of External Changes (تأثير المتغيرات الخارجية):** تغيير المعاملات المفروضة من السوق الخارجي مثل **كميات الطلب في الأسواق $D_{jk}$ أو أسعار الشحن والوقود الخارجية**.
+- **c) Impact of Technological Changes (تأثير التغير التكنولوجي):** تغيير **معاملات الفن الإنتاجي (Input-output technical coefficients $a_{ij}$)** أو تكلفة إنتاج الوحدة $P_{ij}$ نتيجة تحديث الآلات.
+- **d) Sensitivity Analysis (تحليل الحساسية):** دراسة مدى استقرار الحل الأمثل وتغير قيمة الهدف (Shadow prices / Marginals) عند تغير معاملات الطرف الأيمن (RHS) أو معاملات دالة الهدف ضمن مدى معين.`,
+  },
+
+  // =========================================================================
+  // SECTION 10: SIMULATION & ARENA (1 Question)
+  // =========================================================================
+  'mt2018-b20': {
+    explanationAr:
+      'الإجابة **TRUE (صح)** ✅. نماذج المحاكاة (**Simulation**) والأمثلية (**Optimization**) بتُستخدم أساساً لتقييم البدائل المتاحة ودراسة تأثير الظروف والمتغيرات الخارجية (مثل تقلبات الطلب وأوقات الخدمة العشوائية) داخل بيئة الـ DSS.',
+  },
+
+  // =========================================================================
+  // SECTION 11: ANALYTIC HIERARCHY PROCESS - AHP (3 Questions)
+  // =========================================================================
+  'f2020-a2-1': {
+    explanationAr:
+      'الإجابة الصحيحة هي **C (Special purpose tool-oriented DSS)** ✅. نموذج الـ **AHP** في شجرة تصنيف المحاضرة هو المثال النموذجي على **النظام خاص الغرض الموجه بالأداة (Special-Purpose Tool-Oriented DSS)**، لأنه مبني حول أداة رياضية محددة لترتيب البدائل متعددة المعايير.',
+  },
+  'f2023-q1-3': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. خدعة متكررة في امتحانات 2023 و2025! الـ **AHP** يصنف كأداة لـ **Tool-oriented (method-driven) special-purpose DSS** ومش **Domain-oriented**! لأنه أداة عامة تصلح لأي مجال (اختيار موظف، اختيار موقع، شراء جهاز) وليست مقيدة بمجال تطبيقي واحد.',
+  },
+  'f2025-q1-3': {
+    explanationAr:
+      'الإجابة **FALSE (خطأ)** ❌. نفس خدعة 2023 بالظبط! الـ **AHP** هو **Tool-oriented special-purpose DSS** وليس **Domain-oriented**.',
+  },
 }
+
 
 
