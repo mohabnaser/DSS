@@ -7,6 +7,14 @@ import { Icon } from './Icon'
 import { MarkdownLite, Tag } from './ui'
 import { DevelopmentPath } from './diagrams/FoundationDiagrams'
 import { DecisionCycleDiagram } from './diagrams/ProcessDiagrams'
+import {
+  DssClassificationTree,
+  GamsWorkflowDiagram,
+  IntegratedDssArchitecture,
+  ModelCenteredArchitecture,
+  ProductionNetworkDiagram,
+} from './diagrams/ArchitectureDiagrams'
+import { DataPipelineDiagram } from './diagrams/DataDiagrams'
 
 export function SectionExamPractice({
   sectionId,
@@ -353,6 +361,42 @@ export function SectionExamPractice({
                       {question.visual === 'decision-cycle' && (
                         <div className="model-answer-visual">
                           <DecisionCycleDiagram />
+                        </div>
+                      )}
+
+                      {question.visual === 'dss-tree' && (
+                        <div className="model-answer-visual">
+                          <DssClassificationTree />
+                        </div>
+                      )}
+
+                      {question.visual === 'conceptual-model' && (
+                        <div className="model-answer-visual">
+                          <IntegratedDssArchitecture />
+                        </div>
+                      )}
+
+                      {question.visual === 'model-dss' && (
+                        <div className="model-answer-visual">
+                          <ModelCenteredArchitecture />
+                        </div>
+                      )}
+
+                      {question.visual === 'gams-workflow' && (
+                        <div className="model-answer-visual">
+                          <GamsWorkflowDiagram />
+                        </div>
+                      )}
+
+                      {question.visual === 'data-pipeline' && (
+                        <div className="model-answer-visual">
+                          <DataPipelineDiagram />
+                        </div>
+                      )}
+
+                      {question.visual === 'production-network' && (
+                        <div className="model-answer-visual">
+                          <ProductionNetworkDiagram />
                         </div>
                       )}
 
