@@ -8,6 +8,7 @@ import {
   QUESTIONS,
   QUESTION_TYPE_LABEL,
 } from '../data/exams'
+import { ARABIC_EXPLANATIONS } from '../data/exams/arabic-explanations'
 import { useLearning } from '../context/LearningContext'
 import { Icon } from '../components/Icon'
 import { Callout, MarkdownLite, PageHeader, Pill, Tag } from '../components/ui'
@@ -294,9 +295,11 @@ function QuestionCard({
   open: boolean
   onToggle: () => void
 }) {
+  const { lang } = useLearning()
   const unresolved = isUnresolved(question)
   const contextOnly = question.status === 'context-only'
   const answer = answerText(question)
+  const arEntry = ARABIC_EXPLANATIONS[question.id]
 
   return (
     <article className={`question-card ${open ? 'is-open' : ''} ${unresolved ? 'is-unresolved' : ''}`}>
@@ -347,6 +350,19 @@ function QuestionCard({
             <strong className={unresolved ? 'is-unresolved' : ''}>{answer}</strong>
           </div>
           <p className="question-answer__explanation">{question.explanation}</p>
+          {lang === 'ar' && arEntry && (
+            <div className="answer-feedback-box__ar" dir="rtl">
+              <strong>تفسير الإجابة بالمصري 💡:</strong>
+              <div className="ar-explanation-text">
+                <MarkdownLite text={arEntry.explanationAr} />
+              </div>
+              {arEntry.solutionAr && (
+                <div className="ar-solution-breakdown">
+                  <MarkdownLite text={arEntry.solutionAr} />
+                </div>
+              )}
+            </div>
+          )}
           {question.solution && (
             <details className="question-answer__details">
               <summary>Model answer / expected structure</summary>
@@ -532,9 +548,14 @@ function Drill({
                 <strong>{currentCorrect ? 'Correct' : 'Not quite'} · answer: {answerText(current)}</strong>
                 <p>{current.explanation}</p>
                 {lang === 'ar' && (
-                  <p dir="rtl" className="drill-feedback__ar">
-                    الإجابة الأصلية والمصطلحات تفضل بالإنجليزي. راجع الربط بين السؤال والمفهوم: {current.topic}.
-                  </p>
+                  <div dir="rtl" className="drill-feedback__ar ar-explanation-text">
+                    <MarkdownLite
+                      text={
+                        ARABIC_EXPLANATIONS[current.id]?.explanationAr ??
+                        `راجع الربط بين السؤال والمفهوم: **${current.topic}**.`
+                      }
+                    />
+                  </div>
                 )}
                 {current.note && <small>{current.note}</small>}
               </div>

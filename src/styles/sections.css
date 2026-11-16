@@ -46,7 +46,7 @@
 .accordion__kicker {
   display: block;
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   color: var(--cyan-deep);
   margin-bottom: 2px;
@@ -93,7 +93,7 @@
 
 .hif-card__top span {
   font-family: var(--font-mono);
-  font-size: 8.5px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   color: var(--faint);
 }
@@ -103,7 +103,7 @@
 }
 
 .hif-card__q {
-  font-size: 11.5px;
+  font-size: 13.5px;
   color: var(--muted);
   line-height: 1.55;
 }
@@ -116,7 +116,7 @@
 }
 
 .hif-card__tools span {
-  font-size: 9.5px;
+  font-size: 12.5px;
   padding: 2px 7px;
   border-radius: 4px;
   background: var(--surface-2);
@@ -151,7 +151,7 @@
 
 .cycle-detail-card__n {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12.5px;
   color: var(--cyan);
   padding-top: 2px;
 }
@@ -164,7 +164,7 @@
 }
 
 .cycle-detail-card p {
-  font-size: 11.5px;
+  font-size: 13.5px;
   line-height: 1.55;
   color: var(--muted);
 }
@@ -172,7 +172,7 @@
 .cycle-detail-card__dss {
   display: inline-block;
   margin-top: 6px;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   color: var(--cyan-deep);
   border-top: 1px dashed var(--border);
@@ -220,7 +220,7 @@
 
 .vuca-card div > span {
   display: block;
-  font-size: 10.5px;
+  font-size: 13px;
   line-height: 1.45;
   color: var(--text-soft);
   margin-bottom: 5px;
@@ -253,7 +253,7 @@
   border-bottom: 1px solid var(--border);
   background: rgba(4, 10, 18, 0.3);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cyan-deep);
@@ -273,19 +273,19 @@
 
 .path-step__n {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   color: var(--faint);
 }
 
 .path-step strong {
   display: block;
-  font-size: 11.5px;
+  font-size: 13.5px;
   color: var(--text-soft);
 }
 
 .path-step small {
   display: block;
-  font-size: 10.5px;
+  font-size: 13px;
   color: var(--faint);
   margin-top: 1px;
 }
@@ -293,7 +293,7 @@
 .path-step__tag {
   display: inline-block;
   margin-top: 4px;
-  font-size: 8.5px;
+  font-size: 12px;
   padding: 1px 6px;
   border-radius: 3px;
   background: var(--surface-3);
@@ -323,7 +323,7 @@
 
 .pipeline-step > span {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   color: var(--cyan-deep);
   display: block;
   margin-bottom: 5px;
@@ -337,7 +337,7 @@
 }
 
 .pipeline-step p {
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.55;
   color: var(--muted);
 }
@@ -375,7 +375,7 @@
 
 .cube-vocab small {
   display: block;
-  font-size: 9.5px;
+  font-size: 12.5px;
   color: var(--faint);
   margin-top: 1px;
   line-height: 1.4;
@@ -406,7 +406,7 @@
   border: 1px solid var(--border);
   background: var(--surface-2);
   color: var(--muted);
-  font-size: 10.5px;
+  font-size: 13px;
   cursor: pointer;
 }
 
@@ -433,14 +433,14 @@
   border: 1px solid var(--border);
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
 }
 
 .olap-demo__explain {
   padding: 14px 20px 18px;
   border-top: 1px solid var(--border);
-  font-size: 11.5px;
+  font-size: 13.5px;
   line-height: 1.6;
   color: var(--muted);
 }
@@ -461,7 +461,7 @@
   background: none;
   border: 0;
   padding: 4px 8px;
-  font-size: 10px;
+  font-size: 12.5px;
   color: var(--faint);
   cursor: pointer;
 }
@@ -480,7 +480,7 @@
   border: 1px solid var(--border);
   background: var(--surface-2);
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
 }
 
@@ -504,7 +504,7 @@
 
 .cube-op-arrow {
   color: var(--faint);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .olap-result {
@@ -513,14 +513,14 @@
   border-radius: 7px;
   border: 1px dashed var(--border);
   background: var(--bg-soft);
-  font-size: 11px;
+  font-size: 13px;
   color: var(--muted);
   line-height: 1.55;
 }
 
 .olap-result__caption {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--cyan-deep);
@@ -531,7 +531,7 @@
 .olap-result__note {
   margin-top: 6px;
   color: var(--faint);
-  font-size: 10px;
+  font-size: 12.5px;
 }
 
 /* -------------------------------------------------------- design/ university */
@@ -586,7 +586,7 @@
 
 .compare-split__kicker {
   font-family: var(--font-mono);
-  font-size: 8.5px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   color: var(--faint);
   display: block;
@@ -698,7 +698,7 @@
 }
 
 .model-catalog__group p {
-  font-size: 11.5px;
+  font-size: 13.5px;
   line-height: 1.55;
   color: var(--muted);
 }
@@ -708,7 +708,7 @@
 .model-catalog__group ul {
   margin: 8px 0 0;
   padding-left: 16px;
-  font-size: 11px;
+  font-size: 13px;
   color: var(--muted);
   line-height: 1.6;
 }
@@ -761,7 +761,7 @@
   background: var(--surface-2);
   border: 1px solid var(--border);
   font-family: var(--font-mono);
-  font-size: 8.5px;
+  font-size: 12px;
   color: var(--cyan);
 }
 
@@ -802,7 +802,7 @@
   margin-top: 10px;
   padding-top: 8px;
   border-top: 1px dashed var(--border);
-  font-size: 10.5px;
+  font-size: 13px;
   font-style: italic;
   color: var(--faint);
   line-height: 1.5;
@@ -856,7 +856,7 @@
 
 .scenario-card__n {
   font-family: var(--font-mono);
-  font-size: 8.5px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   color: var(--faint);
 }
@@ -882,7 +882,7 @@
 
 .scenario-card dt {
   font-family: var(--font-mono);
-  font-size: 8.5px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--cyan-deep);
@@ -940,14 +940,14 @@
 .event-vocabulary strong {
   display: block;
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.07em;
   color: var(--cyan);
   margin-bottom: 3px;
 }
 
 .event-vocabulary p {
-  font-size: 10.5px;
+  font-size: 13px;
   line-height: 1.55;
   color: var(--muted);
 }
@@ -968,13 +968,13 @@
 
 .run-setup-grid strong {
   display: block;
-  font-size: 11.5px;
+  font-size: 13.5px;
   color: var(--text-soft);
   margin-bottom: 3px;
 }
 
 .run-setup-grid p {
-  font-size: 10.5px;
+  font-size: 13px;
   line-height: 1.5;
   color: var(--muted);
 }
@@ -1025,7 +1025,7 @@
 
 .saaty-rule p {
   margin-top: 4px;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.55;
   color: var(--muted);
 }
@@ -1047,7 +1047,7 @@
 
 .ahp-method-step > span {
   font-family: var(--font-mono);
-  font-size: 9px;
+  font-size: 12px;
   color: var(--cyan-deep);
   display: block;
   margin-bottom: 4px;
@@ -1091,7 +1091,7 @@
 }
 
 .ahp-walkthrough__top p {
-  font-size: 11.5px;
+  font-size: 13.5px;
   line-height: 1.6;
   color: var(--muted);
   max-width: 580px;
@@ -1118,14 +1118,14 @@
   border-radius: 6px;
   background: none;
   color: var(--faint);
-  font-size: 10px;
+  font-size: 12.5px;
   cursor: pointer;
   white-space: nowrap;
 }
 
 .ahp-steps button span {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   color: var(--cyan-deep);
 }
 
@@ -1178,7 +1178,7 @@
 .ahp-matrix {
   width: 100%;
   border-collapse: collapse;
-  font-size: 10.5px;
+  font-size: 13px;
   border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
@@ -1196,7 +1196,7 @@
   background: var(--surface-2);
   color: var(--cyan);
   font-weight: 500;
-  font-size: 8.5px;
+  font-size: 12px;
   letter-spacing: 0.03em;
 }
 
@@ -1204,7 +1204,7 @@
   text-align: left;
   color: var(--text-soft);
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 12.5px;
   white-space: nowrap;
 }
 
@@ -1214,7 +1214,7 @@
 
 .ahp-matrix__caption {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--faint);
@@ -1237,7 +1237,7 @@
 }
 
 .ahp-interpretation p {
-  font-size: 11.5px;
+  font-size: 13.5px;
   line-height: 1.6;
   color: var(--muted);
   margin: 5px 0;
@@ -1246,7 +1246,7 @@
 .ahp-interpretation small {
   display: block;
   margin-top: 8px;
-  font-size: 9.5px;
+  font-size: 12.5px;
   color: var(--faint);
   line-height: 1.5;
 }
@@ -1259,7 +1259,7 @@
 }
 
 .ahp-scale-legend span {
-  font-size: 8.5px;
+  font-size: 12px;
   padding: 2px 6px;
   border-radius: 3px;
   background: var(--surface-3);
@@ -1279,7 +1279,7 @@
   border: 1px solid rgba(233, 184, 93, 0.3);
   border-radius: 5px;
   background: rgba(233, 184, 93, 0.07);
-  font-size: 10px;
+  font-size: 12.5px;
   color: var(--amber-bright);
 }
 
@@ -1307,7 +1307,7 @@
   border: 1px solid var(--border);
   border-radius: 4px;
   background: var(--surface);
-  font-size: 8.5px;
+  font-size: 12px;
   color: var(--muted);
 }
 
@@ -1327,13 +1327,13 @@
 }
 
 .weight-row > span {
-  font-size: 10.5px;
+  font-size: 13px;
   color: var(--muted);
 }
 
 .weight-row strong {
   font-family: var(--font-mono);
-  font-size: 9.5px;
+  font-size: 12.5px;
   color: var(--cyan);
   text-align: right;
 }
@@ -1354,7 +1354,7 @@
 
 .ahp-small-note {
   margin-top: 12px;
-  font-size: 9.5px;
+  font-size: 12.5px;
   line-height: 1.5;
   color: var(--faint);
 }
@@ -1369,7 +1369,7 @@
 .ahp-alt-table table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 10.5px;
+  font-size: 13px;
   margin: 7px 0;
 }
 
@@ -1385,7 +1385,7 @@
 .ahp-alt-table th {
   color: var(--text-soft);
   font-family: var(--font-body);
-  font-size: 9.5px;
+  font-size: 12.5px;
   font-weight: 600;
   background: var(--surface-3);
 }
@@ -1423,7 +1423,7 @@
 }
 
 .ahp-final__name {
-  font-size: 11.5px;
+  font-size: 13.5px;
   color: var(--text-soft);
 }
 
@@ -1447,7 +1447,7 @@
 
 .ahp-final__row strong {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 12.5px;
   color: var(--cyan);
   text-align: right;
 }
@@ -1456,7 +1456,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 8.5px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cyan);
@@ -1464,7 +1464,7 @@
 }
 
 .ahp-note {
-  font-size: 9.5px;
+  font-size: 12.5px;
 }
 
 /* --------------------------------------------------------------- support map */
@@ -1490,7 +1490,7 @@
   padding: 9px 12px;
   text-align: center;
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.08em;
   color: var(--faint);
   border-right: 1px solid var(--border);
@@ -1523,7 +1523,7 @@
 }
 
 .support-map-card p {
-  font-size: 10.5px;
+  font-size: 13px;
   line-height: 1.55;
   color: var(--muted);
 }
@@ -1536,7 +1536,7 @@
 }
 
 .support-map-card__systems span {
-  font-size: 8.5px;
+  font-size: 12px;
   padding: 2px 6px;
   border-radius: 3px;
   background: var(--surface-3);
@@ -1569,7 +1569,7 @@
 
 .ai-evolution__num {
   font-family: var(--font-mono);
-  font-size: 8px;
+  font-size: 12px;
   color: var(--cyan-deep);
   display: block;
   margin-bottom: 3px;
@@ -1577,13 +1577,13 @@
 
 .ai-evolution__card strong {
   display: block;
-  font-size: 11px;
+  font-size: 13px;
   color: var(--text-soft);
 }
 
 .ai-evolution__card small {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   color: var(--faint);
   margin-top: 1px;
   line-height: 1.4;
@@ -1591,7 +1591,7 @@
 
 .ai-evolution__arrow {
   color: var(--cyan-deep);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 /* ----------------------------------------------------------------- misc rows */
@@ -1676,7 +1676,7 @@
   }
 
   .ahp-matrix table {
-    font-size: 9.5px;
+    font-size: 12.5px;
   }
 
   .ahp-matrix th,
@@ -1685,7 +1685,7 @@
   }
 
   .ahp-matrix th[scope='row'] {
-    font-size: 9px;
+    font-size: 12px;
   }
 
   .scenario-card dl > div {
