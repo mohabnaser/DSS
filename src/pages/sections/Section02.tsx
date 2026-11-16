@@ -101,13 +101,13 @@ export function Section02({ onNavigate }: { onNavigate: (page: PageId) => void }
         </ConceptGrid>
 
         <ExamFocus
-          titleEn="Strategic Decisions Depend on External Data"
-          title="💡 المهم فالامتحان · سؤال بيتكرر كل سنة!"
-          ar="في الامتحانات (2018 Midterm, 2018 Final, 2019, 2023, 2025): بيسأل عن طبيعة البيانات في القرارات الاستراتيجية. احفظ القاعدة دي: In Strategic Decision Making, External Data is MORE important than internal data! وأي جملة تقول 'External data are not strongly needed' هي FALSE فوراً وبلا تردد!"
+          titleEn="Strategic Decisions: External + Internal Data Rule"
+          title="المهم فالامتحان · سؤال بيتكرر بـ 3 صيغ!"
+          ar="في الامتحانات (2018 و2019 و2023 و2025) السؤال ده بيجي بـ 3 صيغ مختلفة وكلهم إجابتهم FALSE! ليه؟ لأن القرار الاستراتيجي بيحتاج البيانات الخارجية والداخلية معاً (Both External & Internal Data) بجانب رأي الخبراء (Expert Opinion). فلو قالك: (1) External data are not needed → FALSE، أو (2) External data is less important → FALSE، أو حتى (3) External data is more important (مفاضلة مطلقة تلغي الداخلي) → FALSE!"
         >
           <p>
-            <strong>Core Rule:</strong> In <strong>Strategic Decision Making</strong>, <strong>External Data</strong> (competitors, regulatory shifts, economic indicators)
-            is far more critical than internal data. Any statement claiming external data is not needed for strategic decisions is <strong>FALSE</strong>.
+            <strong>Core Rule:</strong> Strategic decisions require <strong>both External environmental data AND Internal capability data</strong> alongside <strong>Expert Opinion</strong>.
+            Therefore, any statement claiming external data is <em>“not needed”</em>, <em>“less important”</em>, or categorically <em>“more important”</em> than internal data is <strong>FALSE</strong>.
           </p>
         </ExamFocus>
 

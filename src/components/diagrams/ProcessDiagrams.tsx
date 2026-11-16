@@ -66,18 +66,18 @@ export function DecisionCycleDiagram() {
           )
         })}
 
-        <path d="M540 111 C625 123 680 166 713 208" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
-        <path d="M818 184 C854 226 865 281 916 330" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
-        <path d="M822 361 C804 420 767 484 704 527" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
-        <path d="M694 543 C622 562 532 562 470 548" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
-        <path d="M400 529 C337 501 289 453 257 417" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
-        <path d="M164 441 C118 397 101 343 92 309" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
-        <path d="M123 235 C153 174 204 129 278 106" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
-        <path d="M397 96 C412 84 424 73 434 65" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
+        {/* Clean edge-to-edge clockwise arrows between the 7 stage cards */}
+        <path d="M634 60 C675 62, 695 85, 716 112" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
+        <path d="M855 174 C880 205, 895 232, 900 262" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
+        <path d="M900 354 C895 388, 880 415, 855 442" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
+        <path d="M716 502 C688 528, 665 548, 636 556" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
+        <path d="M426 556 C395 548, 372 528, 354 502" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
+        <path d="M210 444 C185 415, 170 388, 165 356" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
+        <path d="M165 264 C175 145, 285 72, 424 62" className="cycle-arrow" markerEnd="url(#arrow-cycle)" />
 
         <g>
-          <rect x="406" y="583" width="208" height="24" rx="12" className="dg-box dg-box--accent" />
-          <text x="510" y="599" textAnchor="middle" className="dg-small dg-small--cyan">feedback reopens the cycle</text>
+          <rect x="195" y="136" width="212" height="26" rx="13" className="dg-box dg-box--accent" />
+          <text x="301" y="153" textAnchor="middle" className="dg-small dg-small--cyan">feedback reopens the cycle ↺</text>
         </g>
       </svg>
     </DiagramFrame>
