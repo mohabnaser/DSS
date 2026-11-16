@@ -55,11 +55,11 @@ export function DecisionCycleDiagram() {
               <text x={pos.x + 44} y={pos.y + 46} className="dg-small">{stage.sub}</text>
               <text x={pos.x + 20} y={pos.y + 67} className="dg-small dg-small--muted">
                 {index === 0 && 'formulate the problem'}
-                {index === 1 && 'plan data estimation + environment'}
-                {index === 2 && 'evaluate impacts and risks'}
-                {index === 3 && 'compare cost and effectiveness'}
+                {index === 1 && 'plan & estimate data'}
+                {index === 2 && 'evaluate impacts & risks'}
+                {index === 3 && 'compare cost & impact'}
                 {index === 4 && 'choice under judgment'}
-                {index === 5 && 'approval and communication'}
+                {index === 5 && 'approve & communicate'}
                 {index === 6 && 'follow-up loops back'}
               </text>
             </g>

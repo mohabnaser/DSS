@@ -392,6 +392,18 @@
   max-width: none;
 }
 
+/* StageFlow: wrap all stages cleanly so none are clipped off-screen */
+.stage-flow__track {
+  flex-wrap: wrap;
+  overflow-x: visible;
+  gap: 12px;
+}
+
+.stage-flow__step-wrapper {
+  flex: 1 1 200px;
+  min-width: 195px;
+}
+
 /* VUCA cards: larger text */
 .vuca-card strong {
   font-size: 17px !important;
